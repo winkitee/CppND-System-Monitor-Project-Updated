@@ -8,6 +8,8 @@ It contains relevant attributes as shown below
 */
 class Process {
  public:
+  Process(int pid);
+
   int Pid();                               // TODO: See src/process.cpp
   std::string User();                      // TODO: See src/process.cpp
   std::string Command();                   // TODO: See src/process.cpp
@@ -18,6 +20,11 @@ class Process {
 
   // TODO: Declare any necessary private members
  private:
+  int pid_;
+  float hz_;
+  float seconds_;
+  float cpuUtilization_ = 0.0;
 };
+
 
 #endif
